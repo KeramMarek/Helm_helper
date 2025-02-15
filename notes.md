@@ -84,3 +84,7 @@ helm upgrade name_of_release bitnami/nginx --values values.yaml
 ```bash
 helm show values bitnami/nginx > values.default.yaml
 ```
+#### example of helm command:
+```bash
+helm install name_of_release ectobiit/adminer --values values.yaml --namespace rambo --create-namespace
+```
