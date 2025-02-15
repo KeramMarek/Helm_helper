@@ -1,12 +1,12 @@
-#### Chart: is collectin of yaml files. 
+Chart: is collectin of yaml files. 
 
-#### Release: installed chart in K8s.
+Release: installed chart in K8s.
 
-#### Config: configurations in the values.yaml file and contains config explicit to a release of k8s app
+Config: configurations in the values.yaml file and contains config explicit to a release of k8s app
 
-#### Repository: place of published charts.
+Repository: place of published charts.
 
-#### Hub: helps to find charts hosted in many distributed repositories.
+Hub: helps to find charts hosted in many distributed repositories.
 
 #### shows repos after addding them localy:
 ```bash
@@ -52,25 +52,25 @@ helm show chart bitnami/nginx
 ```
 this should show info abot the chart. And values are all the things you can congigure
 
-to check version of all the charts:
+#### to check version of all the charts:
 ```bash
 helm search repo bitnami/nginx --versions | grep "nginx "
 ```
-to change from one version of chart to the other: after the upgrade you will see revision number increas.
+#### to change from one version of chart to the other: after the upgrade you will see revision number increas.
 ```bash
 helm upgrade name_of_release bintmai/nginx --version 13.1.3
 ```
-we can check history of revision:
+#### we can check history of revision:
 ```bash
 helm history name_of_the_release
 ```
-we can also rollback from new version to old with:
+#### we can also rollback from new version to old with:
 ```bash
 helm rollback name_of_the_release 1
 ```
 number 1 is number of revision.
 
-we can also scale the number of replicas when the release is already running by:
+#### we can also scale the number of replicas when the release is already running by:
 ```bash
 helm upgrade name_of_release bitnami/nginx --set replicaCount=2
 ```
@@ -80,7 +80,7 @@ if we have more changes to make we can make a file values.yaml and put all the p
 ```bash
 helm upgrade name_of_release bitnami/nginx --values values.yaml
 ```
-we can help ourself by creating our file from the oreginal values file and see what is there to change:
+#### we can help ourself by creating our file from the oreginal values file and see what is there to change:
 ```bash
 helm show values bitnami/nginx > values.default.yaml
 ```
