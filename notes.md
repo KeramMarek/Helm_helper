@@ -27,7 +27,7 @@ helm status nameofyouinstalledchart
 
 #### pulling the repo:
 ```bash
-helm pull bitnami/nginx
+helm pull bitnami/nginx --untar
 ```
 
 by pulling the repo you will have zip pacage .tgz that you can tar -vdf  nameoffile.tgz it contains list yaml manifests. 
